@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 #include <omp.h>
 
 #define N 1000
@@ -16,6 +17,8 @@ void imprimeArreglo(float *d);
 
 int main()
 {
+	srand(static_cast<unsigned>(time(nullptr)));
+
 	float a[N], b[N], c[N];
 	int i;
 	int min = 1, max = 10000;
